@@ -1,0 +1,13 @@
+1. run `./configure`
+
+2. run `make` to compile
+
+3. run `make install` as root
+
+4. if desired, run `mkdir ~/.tile`
+
+5. if desired, run `cp /usr/local/share/tile/wmprofiles /usr/local/share/tile/wmavoid ~/.tile/` and edit the files
+
+6. when run, if you do not want to use complete full screen, use the "-p" with one
+   of the values from wmprofiles. also, use -m or -w for multi-desktop operation.
+

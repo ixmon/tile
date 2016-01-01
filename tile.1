@@ -1,0 +1,48 @@
+.\" 
+.TH "tile" "1" "0.7.2" "Greg Schenzel" ""
+.SH "NAME"
+tile \- arrange X11 windows on the desktop
+.SH "SYNOPSIS"
+.B tile
+[\fB\-\-verbose\fR]
+[\fB\-h\fR
+| \fB\-v\fR]
+[\fB\-p\fIprofile\fR]
+[\fB\-m\fR
+| \fB\-w\fR]
+[\fB\-\-help\fR]
+.SH "DESCRIPTION"
+This is a utility to tile windows on the desktop. It supports user\-
+configurable window manager profiles to avoid screen objects and can
+tile in a horizontal or vertical fashion. It works well with MWM,
+Oroborus and some multi\-desktop WMs like FluxBox (given the \-m
+option) or GNOME/Net-WM compliant WMs (given the \-w option). It is
+somewhat tested with GNOME, and not tested with
+KDE; good luck. If testing out new territory, I encourage you to
+submit the wmprofiles and "avoid" rc data that you use.
+.SH "OPTIONS"
+.TP 
+.B \-v,\-\-vertical
+vertical placement
+.TP 
+.B \-h,\-\-horizontal
+horizontal placement
+.TP
+.B \-w,\-\-net-wm
+enable multi\-desktop operation (GNOME, NET-WM compatible, etc)
+.TP 
+.B \-m,\-\-win\-workspace
+enable multi\-desktop operation (oroborus, fluxbox, etc)
+.TP 
+\fB\-p\fIprofn\fR,\fB\-\-profile=\fIprofn\fR
+window manager profile name, from $PREFIX/share/tile/wmprofiles or
+$HOME/.tile/wmprofiles.
+.TP 
+.B \-\-verbose
+verbose
+.TP 
+.B \-\-help
+help
+
+.SH "AUTHOR"
+This software written by Greg Schenzel. Please mail bug reports, feature requests, and patches to inittab@unixdev.net.

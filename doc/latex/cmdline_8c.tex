@@ -1,0 +1,42 @@
+\section{cmdline.c File Reference}
+\label{cmdline_8c}\index{cmdline.c@{cmdline.c}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include \char`\"{}getopt.h\char`\"{}}\par
+{\tt \#include \char`\"{}tilerc.h\char`\"{}}\par
+{\tt \#include \char`\"{}cmdline.h\char`\"{}}\par
+{\tt \#include \char`\"{}tile.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf cmdline\_\-parser\_\-print\_\-version} (void)
+\begin{CompactList}\small\item\em Print software package name and version. \item\end{CompactList}\item 
+void {\bf cmdline\_\-parser\_\-print\_\-help} (void)
+\begin{CompactList}\small\item\em Print program usage. \item\end{CompactList}\item 
+int {\bf cmdline\_\-parser} (int argc, char $\ast$const $\ast$argv, struct {\bf tile\_\-config} $\ast$tileconf)
+\begin{CompactList}\small\item\em Parse the command-line options. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cmdline.c@{cmdline.c}!cmdline_parser@{cmdline\_\-parser}}
+\index{cmdline_parser@{cmdline\_\-parser}!cmdline.c@{cmdline.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int cmdline\_\-parser (int {\em argc}, char $\ast$const $\ast$ {\em argv}, struct {\bf tile\_\-config} $\ast$ {\em tileconf})}\label{cmdline_8c_a3}
+
+
+Parse the command-line options. 
+
+\index{cmdline.c@{cmdline.c}!cmdline_parser_print_help@{cmdline\_\-parser\_\-print\_\-help}}
+\index{cmdline_parser_print_help@{cmdline\_\-parser\_\-print\_\-help}!cmdline.c@{cmdline.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void cmdline\_\-parser\_\-print\_\-help (void)}\label{cmdline_8c_a1}
+
+
+Print program usage. 
+
+\index{cmdline.c@{cmdline.c}!cmdline_parser_print_version@{cmdline\_\-parser\_\-print\_\-version}}
+\index{cmdline_parser_print_version@{cmdline\_\-parser\_\-print\_\-version}!cmdline.c@{cmdline.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void cmdline\_\-parser\_\-print\_\-version (void)}\label{cmdline_8c_a0}
+
+
+Print software package name and version. 
+

@@ -1,0 +1,102 @@
+\section{x11.h File Reference}
+\label{x11_8h}\index{x11.h@{x11.h}}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf GWIDTH}~0
+\begin{CompactList}\small\item\em Request width (get\-Geom). \item\end{CompactList}\item 
+\#define {\bf GHEIGHT}~1
+\begin{CompactList}\small\item\em Request height (get\-Geom). \item\end{CompactList}\item 
+\#define {\bf GX}~2
+\begin{CompactList}\small\item\em Request x (get\-Geom). \item\end{CompactList}\item 
+\#define {\bf GY}~4
+\begin{CompactList}\small\item\em Request y (get\-Geom). \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+Window {\bf on\-Root} (Display $\ast$, Window)
+\begin{CompactList}\small\item\em Goes up the window tree for a top-level window (with decorations). \item\end{CompactList}\item 
+int {\bf get\-Geom} (Display $\ast$, Window, int)
+\begin{CompactList}\small\item\em Find window geometry element. \item\end{CompactList}\item 
+int {\bf is\-Not\-Iconified} (Display $\ast$, Window)
+\begin{CompactList}\small\item\em Checks whether a window is visible. \item\end{CompactList}\item 
+void {\bf recurse\-Window} (Display $\ast$, Window, struct {\bf tile\_\-config} $\ast$, struct {\bf tile\_\-state} $\ast$)
+\begin{CompactList}\small\item\em Recurse through windows, doing initial window list calculations. \item\end{CompactList}\item 
+void {\bf move\-Resize\-Window} (Display $\ast$, Window, struct {\bf tile\_\-config} $\ast$, struct {\bf tile\_\-state} $\ast$)
+\begin{CompactList}\small\item\em Recurse through windows, doing resize and move operations. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{x11.h@{x11.h}!GHEIGHT@{GHEIGHT}}
+\index{GHEIGHT@{GHEIGHT}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define GHEIGHT~1}\label{x11_8h_a1}
+
+
+Request height (get\-Geom). 
+
+\index{x11.h@{x11.h}!GWIDTH@{GWIDTH}}
+\index{GWIDTH@{GWIDTH}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define GWIDTH~0}\label{x11_8h_a0}
+
+
+Request width (get\-Geom). 
+
+\index{x11.h@{x11.h}!GX@{GX}}
+\index{GX@{GX}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define GX~2}\label{x11_8h_a2}
+
+
+Request x (get\-Geom). 
+
+\index{x11.h@{x11.h}!GY@{GY}}
+\index{GY@{GY}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define GY~4}\label{x11_8h_a3}
+
+
+Request y (get\-Geom). 
+
+
+
+\subsection{Function Documentation}
+\index{x11.h@{x11.h}!getGeom@{getGeom}}
+\index{getGeom@{getGeom}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int get\-Geom (Display $\ast$ {\em dpy}, Window {\em win}, int {\em val})}\label{x11_8h_a5}
+
+
+Find window geometry element. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em val}]One of GWIDTH, GHEIGHT, GX, GY \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Geometry element \end{Desc}
+\index{x11.h@{x11.h}!isNotIconified@{isNotIconified}}
+\index{isNotIconified@{isNotIconified}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int is\-Not\-Iconified (Display $\ast$, Window)}\label{x11_8h_a6}
+
+
+Checks whether a window is visible. 
+
+\index{x11.h@{x11.h}!moveResizeWindow@{moveResizeWindow}}
+\index{moveResizeWindow@{moveResizeWindow}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void move\-Resize\-Window (Display $\ast$, Window, struct {\bf tile\_\-config} $\ast$, struct {\bf tile\_\-state} $\ast$)}\label{x11_8h_a8}
+
+
+Recurse through windows, doing resize and move operations. 
+
+\index{x11.h@{x11.h}!onRoot@{onRoot}}
+\index{onRoot@{onRoot}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Window on\-Root (Display $\ast$, Window)}\label{x11_8h_a4}
+
+
+Goes up the window tree for a top-level window (with decorations). 
+
+\index{x11.h@{x11.h}!recurseWindow@{recurseWindow}}
+\index{recurseWindow@{recurseWindow}!x11.h@{x11.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void recurse\-Window (Display $\ast$, Window, struct {\bf tile\_\-config} $\ast$, struct {\bf tile\_\-state} $\ast$)}\label{x11_8h_a7}
+
+
+Recurse through windows, doing initial window list calculations. 
+

@@ -1,0 +1,27 @@
+\section{avoid.c File Reference}
+\label{avoid_8c}\index{avoid.c@{avoid.c}}
+{\tt \#include $<$X11/X.h$>$}\par
+{\tt \#include $<$X11/Xlib.h$>$}\par
+{\tt \#include $<$X11/Xatom.h$>$}\par
+{\tt \#include $<$X11/Xutil.h$>$}\par
+{\tt \#include $<$X11/Intrinsic.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include \char`\"{}tilerc.h\char`\"{}}\par
+{\tt \#include \char`\"{}tile.h\char`\"{}}\par
+{\tt \#include \char`\"{}avoid.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf should\-We\-Avoid} (Display $\ast$dsp, Window win, char $\ast$optional\_\-name, struct {\bf tile\_\-config} $\ast$tileconf, struct {\bf tile\_\-state} $\ast$tilestate, char $\ast$func)
+\begin{CompactList}\small\item\em Decides whether or not discovery and placement functions should operate on a window. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{avoid.c@{avoid.c}!shouldWeAvoid@{shouldWeAvoid}}
+\index{shouldWeAvoid@{shouldWeAvoid}!avoid.c@{avoid.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int should\-We\-Avoid (Display $\ast$ {\em dsp}, Window {\em win}, char $\ast$ {\em optional\_\-name}, struct {\bf tile\_\-config} $\ast$ {\em tileconf}, struct {\bf tile\_\-state} $\ast$ {\em tilestate}, char $\ast$ {\em func})}\label{avoid_8c_a0}
+
+
+Decides whether or not discovery and placement functions should operate on a window. 
+
+TODO: automate this with the profile system or similar. 

@@ -1,0 +1,64 @@
+0.7.4
+
+  * If run as "iconify", tile will minimize all windows (show desktop for MS users)
+
+
+0.7.3
+
+  * packaging fixes (for NetBSD)
+
+
+0.7.2
+
+  * streamlining of program output
+  * --dump option added
+  * lintian: INSTALL file not packaged
+
+
+0.7.1
+
+  * CLI profile selection fix
+  * Corrected manpage data
+
+
+0.7.0-1
+
+  * wmavoid file deprecated in favor of rc file
+  * Split up source code
+  * now uses GNU getopt-long
+
+
+0.6.4-3
+
+  * wmavoid syntax changed to allow specification of Atom (XA_STRING)
+
+
+0.6.4-2
+
+  * Added .desktop files for GNOME 2
+
+
+0.6.4-1
+
+  * New upstream version.
+  * wmavoid configuration files (local or system) lists window names to ignore (use xprop | grep WM_NAME)
+  * NET-WM support added (-w, very similar to -m)
+  * Corrected manpage and other documentation
+
+
+0.6.2-3
+
+  * more lintian fixes
+  * manpage written
+  
+   
+0.6.2-2
+
+  * lintian source fixes
+
+
+0.6.2
+
+  * New upstream version.
+  * New maintainer.
+

@@ -1,0 +1,75 @@
+tile (0.7.4) stable; urgency=medium
+
+  * If run as "iconify", tile will minimize all windows (show desktop for MS users)
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 25 Feb 2006 15:55:52 -0700
+
+tile (0.7.3) stable; urgency=medium
+
+  * packaging fixes (for NetBSD)
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 24 Sep 2005 02:07:48 -0700
+
+tile (0.7.2) stable; urgency=medium
+
+  * streamlining of program output
+  * --dump option added
+  * lintian: INSTALL file not packaged
+
+ -- Greg Schenzel <inittab@unixdev.net>  Tue, 20 Sep 2005 02:30:58 -0700
+
+tile (0.7.1) stable; urgency=medium
+
+  * CLI profile selection fix
+  * Corrected manpage data
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 18 Sep 2005 22:05:27 -0700
+
+tile (0.7.0-1) stable; urgency=medium
+
+  * wmavoid file deprecated in favor of rc file
+  * Split up source code
+  * now uses GNU getopt-long
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 18 Sep 2005 14:24:15 -0700
+
+tile (0.6.4-3) stable; urgency=medium
+
+  * wmavoid syntax changed to allow specification of Atom (XA_STRING)
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 11 Sep 2005 17:34:41 -0700
+
+tile (0.6.4-2) stable; urgency=medium
+
+  * Added .desktop files for GNOME 2
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 11 Sep 2005 03:04:11 -0700
+
+tile (0.6.4-1) stable; urgency=medium
+
+  * New upstream version.
+  * wmavoid configuration files (local or system) lists window names to ignore (use xprop | grep WM_NAME)
+  * NET-WM support added (-w, very similar to -m)
+  * Corrected manpage and other documentation
+
+ -- Greg Schenzel <inittab@unixdev.net>  Sat, 10 Sep 2005 19:07:11 -0700
+
+tile (0.6.2-3) stable; urgency=medium
+
+  * more lintian fixes
+  * manpage written
+  
+ -- Greg Schenzel <inittab@unixdev.net>  Wed, 10 Aug 2005 13:11:32 -0700
+   
+tile (0.6.2-2) stable; urgency=medium
+
+  * lintian source fixes
+
+ -- Greg Schenzel <inittab@unixdev.net>  Wed, 10 Aug 2005 03:40:56 -0700
+
+tile (0.6.2) stable; urgency=medium
+
+  * New upstream version.
+  * New maintainer.
+
+ -- Greg Schenzel <inittab@netizenweb.com>  Sun, 8 May 2005 10:40:50 -0400

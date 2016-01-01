@@ -1,0 +1,67 @@
+\section{tilerc.c File Reference}
+\label{tilerc_8c}\index{tilerc.c@{tilerc.c}}
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include \char`\"{}tilerc.h\char`\"{}}\par
+{\tt \#include \char`\"{}tile.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf parse\-RC} (char $\ast$file, struct {\bf tile\_\-config} $\ast$tileconf)
+\begin{CompactList}\small\item\em Parse the named configuration file. \item\end{CompactList}\item 
+void {\bf parse\-Config} (struct {\bf tile\_\-config} $\ast$tileconf)
+\begin{CompactList}\small\item\em Find and parse configuration (rc) files. \item\end{CompactList}\item 
+void {\bf parse\-Profiles} (struct {\bf tile\_\-config} $\ast$tileconf)
+\begin{CompactList}\small\item\em Find and parse wmprofiles files. \item\end{CompactList}\item 
+char $\ast$ {\bf strtrim} (char $\ast$string)
+\begin{CompactList}\small\item\em Trim left and right whitespace from string. \item\end{CompactList}\item 
+char $\ast$ {\bf ltrim} (char $\ast$string)
+\begin{CompactList}\small\item\em Trim left whitespace from string. \item\end{CompactList}\item 
+char $\ast$ {\bf rtrim} (char $\ast$string)
+\begin{CompactList}\small\item\em Trim right whitespace from string. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{tilerc.c@{tilerc.c}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ltrim (char $\ast$ {\em string})}\label{tilerc_8c_a4}
+
+
+Trim left whitespace from string. 
+
+\index{tilerc.c@{tilerc.c}!parseConfig@{parseConfig}}
+\index{parseConfig@{parseConfig}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-Config (struct {\bf tile\_\-config} $\ast$ {\em tileconf})}\label{tilerc_8c_a1}
+
+
+Find and parse configuration (rc) files. 
+
+\index{tilerc.c@{tilerc.c}!parseProfiles@{parseProfiles}}
+\index{parseProfiles@{parseProfiles}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-Profiles (struct {\bf tile\_\-config} $\ast$ {\em tileconf})}\label{tilerc_8c_a2}
+
+
+Find and parse wmprofiles files. 
+
+\index{tilerc.c@{tilerc.c}!parseRC@{parseRC}}
+\index{parseRC@{parseRC}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-RC (char $\ast$ {\em file}, struct {\bf tile\_\-config} $\ast$ {\em tileconf})}\label{tilerc_8c_a0}
+
+
+Parse the named configuration file. 
+
+\index{tilerc.c@{tilerc.c}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ rtrim (char $\ast$ {\em string})}\label{tilerc_8c_a5}
+
+
+Trim right whitespace from string. 
+
+\index{tilerc.c@{tilerc.c}!strtrim@{strtrim}}
+\index{strtrim@{strtrim}!tilerc.c@{tilerc.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strtrim (char $\ast$ {\em string})}\label{tilerc_8c_a3}
+
+
+Trim left and right whitespace from string. 
+

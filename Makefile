@@ -1,0 +1,64 @@
+CC=gcc
+CFLAGS=-g -O2  -Wunused
+LIBS=   -lX11 -lXt
+PROG=tile
+PREFIX=/usr/local
+BIN=$(PREFIX)/bin
+SHARE=$(PREFIX)/share
+MAN=$(PREFIX)/man
+VER=0.7.4
+HOSTOS=Linux
+HOSTARCH=x86_64
+HOSTVER=3.13.0-57-generic
+
+all: $(PROG) ChangeLog doc/html/index.html
+
+tile: tile.o tilerc.o avoid.o x11.o cmdline.o
+	$(CC) -o $(PROG) $(LIBS) -Wl,-s tile.o tilerc.o avoid.o x11.o cmdline.o
+
+tile.o: tile.c
+	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c tile.c
+
+tilerc.o: tilerc.c
+	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c tilerc.c
+
+x11.o: x11.c
+	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c x11.c
+
+avoid.o: avoid.c
+	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c avoid.c
+
+cmdline.o: cmdline.c
+	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c cmdline.c
+
+ChangeLog: debian/changelog
+	cat debian/changelog | grep -v '^ -- ' | sed 's/tile (//g' | sed 's/) .*; urgency=.*$$//g' > ChangeLog
+
+doc/html/index.html: tile.c tilerc.c x11.c avoid.c cmdline.c
+	-doxygen tile.doxy
+
+clean:
+	-/bin/rm -rf $(PROG) *.o
+
+partclean:
+	-/bin/rm -rf config.status config.cache config.log autom4te.cache
+
+distclean: clean partclean
+	-/bin/rm -rf Makefile build*
+
+distsrc: distclean
+	cd ..; tar cvf - $(PROG) | bzip2 > $(PROG)_$(VER).tar.bz2
+
+distbin: partclean all
+	cd ..; tar cvf - $(PROG) | bzip2 > $(PROG)_$(VER)_$(HOSTOS)-$(HOSTVER)-$(HOSTARCH).tar.bz2
+
+install:
+	-mkdir -p $(BIN)
+	cp $(PROG) $(BIN)
+	-mkdir -p $(MAN)/man1
+	cp tile.1 $(MAN)/man1
+	-mkdir -p $(SHARE)/tile
+	cp wmprofiles rc $(SHARE)/tile
+	-mkdir -p $(SHARE)/applications
+	cp *.desktop $(SHARE)/applications
+

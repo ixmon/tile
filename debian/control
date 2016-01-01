@@ -1,0 +1,28 @@
+Source: tile
+Section: x11
+Priority: optional
+Maintainer: Greg Schenzel <inittab@unixdev.net>
+Build-Depends: xlibs-dev
+Standards-Version: 3.6.2
+
+Package: tile
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: X11 window tiling utility
+ This is a utility to tile windows on the desktop. It supports user-
+ configurable window manager profiles to avoid screen objects and can
+ tile in a horizontal or vertical fashion. It works well with MWM,
+ Oroborus and some multi-desktop WMs like FluxBox (given the -m
+ option) and GNOME/Metacity (given the -w option).
+ .
+ It has two files controlling its behavior. A third with defaults will
+ be added soon. The first contains "wmprofiles" that tell tile how much
+ space to avoid on the different sides of the screen (specified via
+ "-p"). The second, named "wmavoid", contains a list of WM_NAME Atoms
+ (window titles) that should be avoided for calculations and resize/move
+ operations. Both files may exist under $PREFIX/share/tile/ or
+ $HOME/.tile/.
+ .
+ I encourage you to submit new window manager profiles and window avoid
+ lists to the maintainer for inclusion in upstream releases.
+

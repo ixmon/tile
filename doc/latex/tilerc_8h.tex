@@ -1,0 +1,158 @@
+\section{tilerc.h File Reference}
+\label{tilerc_8h}\index{tilerc.h@{tilerc.h}}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf CFG\_\-NULL}~0
+\begin{CompactList}\small\item\em Fallback configuration option (non-existent). \item\end{CompactList}\item 
+\#define {\bf CFG\_\-ORIEN}~1
+\begin{CompactList}\small\item\em Orientation configuration option. \item\end{CompactList}\item 
+\#define {\bf CFG\_\-MDESK}~2
+\begin{CompactList}\small\item\em Multi-Desk configuration option. \item\end{CompactList}\item 
+\#define {\bf CFG\_\-WPROF}~3
+\begin{CompactList}\small\item\em wmprofile configuration option. \item\end{CompactList}\item 
+\#define {\bf CFG\_\-VERBO}~4
+\begin{CompactList}\small\item\em Verbosity level configuration option. \item\end{CompactList}\item 
+\#define {\bf CFG\_\-AVOID}~5
+\begin{CompactList}\small\item\em Avoid data configuration option. \item\end{CompactList}\item 
+\#define {\bf TRUE}~1
+\begin{CompactList}\small\item\em True. \item\end{CompactList}\item 
+\#define {\bf FALSE}~0
+\begin{CompactList}\small\item\em False. \item\end{CompactList}\item 
+\#define {\bf HORIZONTAL}~2
+\begin{CompactList}\small\item\em Horizontal Window Placement. \item\end{CompactList}\item 
+\#define {\bf VERTICAL}~4
+\begin{CompactList}\small\item\em Vertical Window Placement. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+char $\ast$ {\bf ltrim} (char $\ast$)
+\begin{CompactList}\small\item\em Trim left whitespace from string. \item\end{CompactList}\item 
+char $\ast$ {\bf rtrim} (char $\ast$)
+\begin{CompactList}\small\item\em Trim right whitespace from string. \item\end{CompactList}\item 
+char $\ast$ {\bf strtrim} (char $\ast$)
+\begin{CompactList}\small\item\em Trim left and right whitespace from string. \item\end{CompactList}\item 
+void {\bf parse\-Config} (struct {\bf tile\_\-config} $\ast$)
+\begin{CompactList}\small\item\em Find and parse configuration (rc) files. \item\end{CompactList}\item 
+void {\bf parse\-Profiles} (struct {\bf tile\_\-config} $\ast$)
+\begin{CompactList}\small\item\em Find and parse wmprofiles files. \item\end{CompactList}\item 
+void {\bf parse\-RC} (char $\ast$, struct {\bf tile\_\-config} $\ast$)
+\begin{CompactList}\small\item\em Parse the named configuration file. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{tilerc.h@{tilerc.h}!CFG_AVOID@{CFG\_\-AVOID}}
+\index{CFG_AVOID@{CFG\_\-AVOID}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-AVOID~5}\label{tilerc_8h_a5}
+
+
+Avoid data configuration option. 
+
+\index{tilerc.h@{tilerc.h}!CFG_MDESK@{CFG\_\-MDESK}}
+\index{CFG_MDESK@{CFG\_\-MDESK}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-MDESK~2}\label{tilerc_8h_a2}
+
+
+Multi-Desk configuration option. 
+
+\index{tilerc.h@{tilerc.h}!CFG_NULL@{CFG\_\-NULL}}
+\index{CFG_NULL@{CFG\_\-NULL}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-NULL~0}\label{tilerc_8h_a0}
+
+
+Fallback configuration option (non-existent). 
+
+\index{tilerc.h@{tilerc.h}!CFG_ORIEN@{CFG\_\-ORIEN}}
+\index{CFG_ORIEN@{CFG\_\-ORIEN}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-ORIEN~1}\label{tilerc_8h_a1}
+
+
+Orientation configuration option. 
+
+\index{tilerc.h@{tilerc.h}!CFG_VERBO@{CFG\_\-VERBO}}
+\index{CFG_VERBO@{CFG\_\-VERBO}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-VERBO~4}\label{tilerc_8h_a4}
+
+
+Verbosity level configuration option. 
+
+\index{tilerc.h@{tilerc.h}!CFG_WPROF@{CFG\_\-WPROF}}
+\index{CFG_WPROF@{CFG\_\-WPROF}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CFG\_\-WPROF~3}\label{tilerc_8h_a3}
+
+
+wmprofile configuration option. 
+
+\index{tilerc.h@{tilerc.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~0}\label{tilerc_8h_a7}
+
+
+False. 
+
+\index{tilerc.h@{tilerc.h}!HORIZONTAL@{HORIZONTAL}}
+\index{HORIZONTAL@{HORIZONTAL}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define HORIZONTAL~2}\label{tilerc_8h_a8}
+
+
+Horizontal Window Placement. 
+
+\index{tilerc.h@{tilerc.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~1}\label{tilerc_8h_a6}
+
+
+True. 
+
+\index{tilerc.h@{tilerc.h}!VERTICAL@{VERTICAL}}
+\index{VERTICAL@{VERTICAL}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define VERTICAL~4}\label{tilerc_8h_a9}
+
+
+Vertical Window Placement. 
+
+
+
+\subsection{Function Documentation}
+\index{tilerc.h@{tilerc.h}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ltrim (char $\ast$)}\label{tilerc_8h_a10}
+
+
+Trim left whitespace from string. 
+
+\index{tilerc.h@{tilerc.h}!parseConfig@{parseConfig}}
+\index{parseConfig@{parseConfig}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-Config (struct {\bf tile\_\-config} $\ast$)}\label{tilerc_8h_a13}
+
+
+Find and parse configuration (rc) files. 
+
+\index{tilerc.h@{tilerc.h}!parseProfiles@{parseProfiles}}
+\index{parseProfiles@{parseProfiles}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-Profiles (struct {\bf tile\_\-config} $\ast$)}\label{tilerc_8h_a14}
+
+
+Find and parse wmprofiles files. 
+
+\index{tilerc.h@{tilerc.h}!parseRC@{parseRC}}
+\index{parseRC@{parseRC}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void parse\-RC (char $\ast$, struct {\bf tile\_\-config} $\ast$)}\label{tilerc_8h_a15}
+
+
+Parse the named configuration file. 
+
+\index{tilerc.h@{tilerc.h}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ rtrim (char $\ast$)}\label{tilerc_8h_a11}
+
+
+Trim right whitespace from string. 
+
+\index{tilerc.h@{tilerc.h}!strtrim@{strtrim}}
+\index{strtrim@{strtrim}!tilerc.h@{tilerc.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strtrim (char $\ast$)}\label{tilerc_8h_a12}
+
+
+Trim left and right whitespace from string. 
+

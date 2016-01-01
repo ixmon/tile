@@ -1,0 +1,101 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# debian/rules file - for tile
+# Copyright 2005 by Greg Schenzel
+# Patterned after the rxvt package by Brian Mays.
+# Patterned after the hello package by Ian Jackson.
+
+package=tile
+
+# Stupid hack dictated by policy wonks
+#CFLAGS=-O3 -Wall
+#ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
+#CFLAGS += -g
+#endif
+
+build:	build-std
+	$(checkdir)
+	touch build
+
+build-std: 
+	$(checkdir)
+	$(MAKE) -f debian/rules Makefile
+	$(MAKE) all
+	touch build-std
+
+clean:
+	$(checkdir)
+	$(RM) build*
+	-[ -f Makefile ] && $(MAKE) -i clean
+	-[ -f Makefile ] && rm Makefile
+	-rm -rf debian/files debian/tmp debian/substvars config.log config.status CVS debian/CVS autom4te.cache config.h
+
+binary-indep:	checkroot build
+	$(checkdir)
+
+binary-arch:	tile-std
+
+tile-std:	checkroot build-std
+	$(chechdir)
+	$(RM) -r debian/tmp
+	install -d debian/tmp debian/tmp/DEBIAN
+	install -d debian/tmp/usr/share/doc/$(package)
+	install -d debian/tmp/usr/share/$(package)
+# Install Debian package control information files
+	install debian/preinst debian/postinst debian/prerm \
+	        debian/postrm debian/tmp/DEBIAN/.
+# Install directories
+	install -d debian/tmp/usr/bin
+	install -d debian/tmp/usr/share/man/man1
+	install -d debian/tmp/usr/share/applications
+# Install files
+	cp tile.1 debian/tmp/usr/share/man/man1
+	cp tile debian/tmp/usr/bin
+	ln -s tile debian/tmp/usr/bin/iconify
+	cp *.desktop debian/tmp/usr/share/applications
+	cp wmprofiles debian/tmp/usr/share/$(package)
+	cp rc debian/tmp/usr/share/$(package)
+# Strip binaries (including hack by policy wonks)
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+	strip -R.note -R.comment debian/tmp/usr/bin/*
+endif
+# Install documentation, changelog & copyright
+	install -m644 README debian/tmp/usr/share/doc/$(package)/README
+	#install -m644 INSTALL debian/tmp/usr/share/doc/$(package)/INSTALL
+	install -m644 ChangeLog debian/tmp/usr/share/doc/$(package)/changelog
+	install -m644 TODO debian/tmp/usr/share/doc/$(package)/TODO
+	install -m644 debian/changelog \
+	  debian/tmp/usr/share/doc/$(package)/changelog.Debian
+	gzip -9v `find debian/tmp/usr/share/doc/$(package) -type f` debian/tmp/usr/share/man/man1/*
+#	gzip -9v debian/tmp/usr/share/man/*/*
+	install -m644 debian/copyright debian/tmp/usr/share/doc/$(package)/.
+	cp -r doc/html debian/tmp/usr/share/doc/$(package)/html
+# Determine shared library dependencies
+	dpkg-shlibdeps tile
+# Genereate deb file
+	dpkg-gencontrol -isp -p$(package)
+	chown -R root.root debian/tmp
+	chmod -R g-ws debian/tmp
+	chown root.root debian/tmp/usr/bin/tile
+	chmod 0755 debian/tmp/usr/bin/tile
+	dpkg-deb --build debian/tmp ..
+
+Makefile:
+	./configure --prefix=/usr
+
+define checkdir
+	test -f tile.c -a -f debian/rules
+endef
+
+# Below here is fairly generic really
+
+binary:		binary-indep binary-arch
+
+source diff:
+	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
+
+checkroot:
+	$(checkdir)
+	test root = "`whoami`"
+
+.PHONY: binary binary-arch binary-indep clean checkroot tile-std

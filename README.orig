@@ -1,0 +1,11 @@
+tile is a program that implements three primary functions: Tile Vertically, Tile Horizontally, and Iconify All. If run as "iconify" (via sym. link), then tile will minimize all windows (Show Desktop for MS users). tile operation can be completely customized in ~/.tile/rc and ~/.tile/wmprofiles. wmprofiles specifies the number of pixels on each side of the screen to ignore for calculations and re-placement. An example of something to consider for wmprofiles would be the GNOME panel or Gkrellm. Windows ignored for the purposes of screen size should also generally be avoided in the ~/.tile/rc file. Lines with the syntax of 'avoid STRING-Atom value' in ~/.tile/rc allow you to specify an identifiable STRING-type Atom of windows that should not be touched during resize/move/iconify operations. Once again, the GNOME panel and Gkrellm are good examples of windows that should be considered for avoiding.
+
+./tile
+ -v       vertical (default)
+ -h       horizontal
+ -m       enable multi-desktop _WIN_WORKSPACE support (oroborus, fluxbox, etc)
+ -w       enable multi-desktop _NET_*_DESKTOP support (GNOME, NET WM, etc)
+ -p profn window manager profile name
+ --verbose increase verbosity
+ --help    help
+
